@@ -1,0 +1,8 @@
+---
+
+- name: deploy static content to webserver
+  hosts: webserver
+  remote_user: ec2-user
+  become: true
+  roles:
+    - { role: ngnix, dispatch: ['deploy-static']}

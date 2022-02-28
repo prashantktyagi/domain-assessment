@@ -1,0 +1,9 @@
+---
+
+- name: deploy cwa to send logs to cloudwatch
+  hosts: webserver
+  remote_user: ec2-user
+  become: true
+  roles:
+    - { role: cwa, dispatch: ['install']}
+    - { role: cwa, dispatch: ['configure']}

@@ -1,0 +1,12 @@
+---
+
+- name: install cloudwatch agent
+  package:
+    name: amazon-cloudwatch-agent
+    state: present
+
+- name: Ensure service is started and enabled
+  service:
+    name: amazon-cloudwatch-agent
+    state: started
+    enabled: true

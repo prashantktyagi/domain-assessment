@@ -1,0 +1,5 @@
+---
+
+nginx_port: 443
+worker_processes_count: 2
+nginx_root: '/usr/share/nginx/html'

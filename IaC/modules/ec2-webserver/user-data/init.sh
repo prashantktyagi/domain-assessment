@@ -1,0 +1,1 @@
+echo "hello from aws ec2"

@@ -1,0 +1,28 @@
+server {
+    listen  {{ nginx_port }} ssl http2 default_server;
+    server_name  _;
+
+    ssl_certificate /etc/ssl/certs/notsecure.crt;
+    ssl_certificate_key /etc/ssl/certs/notsecure.key;
+
+    location /images {
+        root   {{ nginx_root }}/static;
+      }
+
+    location /styles {
+        root   {{ nginx_root }}/static;
+      }
+
+    error_page  404              /404.html;
+
+    location = /404.html {
+        root   {{ nginx_root }};
+    }
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   {{ nginx_root }};
+    }
+}

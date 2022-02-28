@@ -1,0 +1,8 @@
+---
+
+- name: deploy app content to application server
+  hosts: webserver
+  remote_user: ec2-user
+  become: true
+  roles:
+    - { role: ngnix, dispatch: ['install'] }

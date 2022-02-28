@@ -1,0 +1,15 @@
+{
+    "logs": {
+        "logs_collected": {
+            "files": {
+                "collect_list": [
+                    {
+                        "file_path": "{{ log_path }}",
+                        "log_group_name": "{{ cloudwatch_group_name }}",
+                        "log_stream_name": "{instance_id}"
+                    }
+                ]
+            }
+        }
+    }
+}

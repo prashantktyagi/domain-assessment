@@ -1,0 +1,2 @@
+log_path: /var/log/nginx/access.log
+cloudwatch_group_name: "webserver"

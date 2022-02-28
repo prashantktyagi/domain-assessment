@@ -1,0 +1,3 @@
+---
+
+cwa_config_file: /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json

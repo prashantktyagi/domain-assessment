@@ -1,0 +1,12 @@
+---
+
+- name: update cwa.conf file
+  template:
+    src: cwa.conf.j2
+    dest: "{{ cwa_config_file }}"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart cwa service
+

@@ -1,0 +1,6 @@
+---
+
+- name: ngnix role task dispatcher
+  include_tasks: "{{ item }}.yml"
+  with_items: "{{ dispatch|default([]) }}"
+  when: "dispatch != []"
